@@ -1,0 +1,45 @@
+08:40:10 **** Incremental Build of configuration Debug for project P_2 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Src/main.c:20:
+../Core/Inc/main.h:120:27: warning: excess elements in array initializer
+  120 | #define BL_OTP_READ       0x5B
+      |                           ^~~~
+../Core/Src/main.c:52:87: note: in expansion of macro 'BL_OTP_READ'
+   52 |                 BL_MEM_WRITE, BL_EN_RW_PROTECT, BL_MEM_READ, BL_READ_SECTOR_P_STATUS, BL_OTP_READ, BL_DIS_R_W_PROTECT};
+      |                                                                                       ^~~~~~~~~~~
+../Core/Inc/main.h:120:27: note: (near initialization for 'supported_commands')
+  120 | #define BL_OTP_READ       0x5B
+      |                           ^~~~
+../Core/Src/main.c:52:87: note: in expansion of macro 'BL_OTP_READ'
+   52 |                 BL_MEM_WRITE, BL_EN_RW_PROTECT, BL_MEM_READ, BL_READ_SECTOR_P_STATUS, BL_OTP_READ, BL_DIS_R_W_PROTECT};
+      |                                                                                       ^~~~~~~~~~~
+../Core/Inc/main.h:124:35: warning: excess elements in array initializer
+  124 | #define BL_DIS_R_W_PROTECT        0x5C
+      |                                   ^~~~
+../Core/Src/main.c:52:100: note: in expansion of macro 'BL_DIS_R_W_PROTECT'
+   52 |                 BL_MEM_WRITE, BL_EN_RW_PROTECT, BL_MEM_READ, BL_READ_SECTOR_P_STATUS, BL_OTP_READ, BL_DIS_R_W_PROTECT};
+      |                                                                                                    ^~~~~~~~~~~~~~~~~~
+../Core/Inc/main.h:124:35: note: (near initialization for 'supported_commands')
+  124 | #define BL_DIS_R_W_PROTECT        0x5C
+      |                                   ^~~~
+../Core/Src/main.c:52:100: note: in expansion of macro 'BL_DIS_R_W_PROTECT'
+   52 |                 BL_MEM_WRITE, BL_EN_RW_PROTECT, BL_MEM_READ, BL_READ_SECTOR_P_STATUS, BL_OTP_READ, BL_DIS_R_W_PROTECT};
+      |                                                                                                    ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "P_2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Bootloader_Course\P_2\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="P_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: P_2.elf
+ 
+arm-none-eabi-size  P_2.elf 
+arm-none-eabi-objdump -h -S P_2.elf  > "P_2.list"
+arm-none-eabi-objcopy  -O binary P_2.elf  "P_2.bin"
+   text	   data	    bss	    dec	    hex	filename
+  19352	    148	   2188	  21688	   54b8	P_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: P_2.bin
+ 
+Finished building: P_2.list
+ 
+
+08:40:11 Build Finished. 0 errors, 2 warnings. (took 994ms)
+

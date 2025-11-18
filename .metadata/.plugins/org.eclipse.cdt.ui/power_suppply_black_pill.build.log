@@ -1,0 +1,10 @@
+13:10:28 **** Incremental Build of configuration Debug for project power_suppply_black_pill ****
+make -j4 all 
+arm-none-eabi-size  power_suppply_black_pill.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10724	     12	   2764	  13500	   34bc	power_suppply_black_pill.elf
+Finished building: default.size.stdout
+ 
+
+13:10:28 Build Finished. 0 errors, 0 warnings. (took 376ms)
+

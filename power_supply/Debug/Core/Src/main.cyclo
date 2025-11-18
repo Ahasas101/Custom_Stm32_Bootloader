@@ -1,0 +1,12 @@
+../Core/Src/main.c:77:5:main	1
+../Core/Src/main.c:125:6:SystemClock_Config	3
+../Core/Src/main.c:166:13:MX_I2C1_Init	4
+../Core/Src/main.c:214:13:MX_I2C2_Init	4
+../Core/Src/main.c:262:13:MX_GPIO_Init	1
+../Core/Src/main.c:307:6:HAL_GPIO_EXTI_Rising_Callback	4
+../Core/Src/main.c:354:13:set_load_mosfet	2
+../Core/Src/main.c:367:13:set_buck_mosfet	2
+../Core/Src/main.c:379:13:toggle_mode	2
+../Core/Src/main.c:391:13:toggle_voltage_level	6
+../Core/Src/main.c:434:13:set_decoy_voltage	1
+../Core/Src/main.c:448:6:Error_Handler	1

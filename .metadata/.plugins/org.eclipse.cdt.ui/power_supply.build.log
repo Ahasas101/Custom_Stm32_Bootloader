@@ -1,0 +1,29 @@
+13:03:27 **** Incremental Build of configuration Debug for project power_supply ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G030xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/oled.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G030xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/oled.d" -MT"Core/Src/oled.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/oled.o"
+../Core/Src/main.c: In function 'toggle_mode':
+../Core/Src/main.c:387:22: warning: value computed is not used [-Wunused-value]
+  387 |                 Mode == Mode1;
+      |                 ~~~~~^~~~~~~~
+../Core/Src/main.c: In function 'toggle_voltage_level':
+../Core/Src/main.c:430:27: warning: passing argument 1 of 'set_decoy_voltage' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  430 |         set_decoy_voltage(&cfg);
+      |                           ^~~~
+../Core/Src/main.c:65:50: note: expected 'config_pins_state *' but argument is of type 'volatile config_pins_state *'
+   65 | static void set_decoy_voltage(config_pins_state* conf);
+      |                               ~~~~~~~~~~~~~~~~~~~^~~~
+arm-none-eabi-gcc -o "power_supply.elf" @"objects.list"   -mcpu=cortex-m0plus -T"D:\Bootloader_Course\power_supply\STM32G030K6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="power_supply.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: power_supply.elf
+ 
+arm-none-eabi-size  power_supply.elf 
+arm-none-eabi-objdump -h -S power_supply.elf  > "power_supply.list"
+   text	   data	    bss	    dec	    hex	filename
+  11976	     12	   2772	  14760	   39a8	power_supply.elf
+Finished building: default.size.stdout
+ 
+Finished building: power_supply.list
+ 
+
+13:03:28 Build Finished. 0 errors, 2 warnings. (took 975ms)
+
