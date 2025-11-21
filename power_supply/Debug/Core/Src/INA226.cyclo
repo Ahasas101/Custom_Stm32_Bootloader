@@ -1,6 +1,0 @@
-../Core/Src/INA226.c:19:6:INA226_WriteReg	1
-../Core/Src/INA226.c:27:10:INA226_ReadReg	1
-../Core/Src/INA226.c:36:20:INA226_Init	3
-../Core/Src/INA226.c:52:7:INA226_ReadBusVoltage	1
-../Core/Src/INA226.c:58:7:INA226_ReadCurrent	1
-../Core/Src/INA226.c:64:7:INA226_ReadPower	1

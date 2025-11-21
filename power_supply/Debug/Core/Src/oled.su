@@ -1,8 +1,0 @@
-../Core/Src/oled.c:118:13:SSD1306_Cmd	32	static
-../Core/Src/oled.c:125:13:SSD1306_Data	40	static
-../Core/Src/oled.c:133:6:SSD1306_Init	8	static
-../Core/Src/oled.c:161:6:SSD1306_Clear	8	static
-../Core/Src/oled.c:166:6:SSD1306_Update	16	static
-../Core/Src/oled.c:178:13:SSD1306_DrawChar	40	static
-../Core/Src/oled.c:199:6:SSD1306_Print	16	static
-../Core/Src/oled.c:209:6:SSD1306_PrintNumber	40	static
